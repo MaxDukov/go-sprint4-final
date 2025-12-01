@@ -17,7 +17,7 @@ const (
 
 // parsePackage разбирает строку данных о количестве шагов и продолжительности прогулки
 func parsePackage(data string) (int, time.Duration, error) {
-	vals := strings.Split(data, " ")
+	vals := strings.Split(data, ",")
 	if len(vals) != 2 {
 		return 0, 0, errors.New("Неверный формат данных")
 	}
